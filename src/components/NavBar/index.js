@@ -23,20 +23,22 @@ export default function Navbar() {
       <div className={styles.links}>
         <div>
           <Link to ='/' className={classNames(styles.link, {
-            [styles.selected]: window.location.pathname === '/'
-          })} />
+            [styles.selected]: location.pathname === '/'
+          })} >
             Página inicial
+            </Link>
         </div>
       </div>
       <div className={styles.busca}>
         <Busca />
       </div>
       <div className={styles.icones}>
-        <Link to ='/carrinho' />
+        <Link to ='/carrinho' >
           {window.location.pathname === '/carrinho'
             ? <RiShoppingCartFill {...iconeProps} />
             : <RiShoppingCart2Line {...iconeProps} />
           }
+          </Link>
       </div>
     </nav>
   )
